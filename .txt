@@ -1,0 +1,47 @@
+Thuc hanh xay dung chuc nang quan li nguoi dung
+
+Phan 1 : Xac thuc truy cap
+- Dang nhap
+- Dang ky
+- Dang xuat
+- Quen mat khau
+- Kich hoat tai khoan
+
+Phan 2 : Quan ly nguoi dung
+
+- Kiem tra nguoi dung dang nhap 
+- Them nguoi dung
+- Sua va xoa nguoi dung
+- Hien thi so user
+- Phan trang
+- Tim kiem va loc du lieu
+
+Thiet ke database :
+
+- Bang Users:
++ id - primary key (int)
++ fullname varchar(100)
++ email varchar(100)
++ phone varchar(10)
++ password varchar(50)
++ forgotToken varchar(100)
++ activeToken varchar(100)
++ create_at datetime
++ update_at datetime
+
+- Bang loginToken
++ id - primary key (int)
++ user_id (int)
++ token varchar(100)
++ create_at datetime
+
+* Code chuc nang dang ky tai khoan
+- Dang ky (kiem tra va insert du lieu vao bang user)
+- Gui mail kich hoat cho nguoi dung
+- Nguoi dung bam vao link kich hoat tai khoan (ma otp)
+
+* Code tinh nang quen mat khau
+- Tao ra forgottoken 
+- Gui email chua link den trang reset
+- Xac thuc token, hien ra form seset password
+- Submit reset password -> xu ly -> update lai mat khau
